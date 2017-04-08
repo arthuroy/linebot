@@ -10,11 +10,9 @@ var bot = linebot({
 bot.on('message', function(event) {
   if (event.message.type = 'text') {
     var msg = event.message.text;
-    var userId = 'U3dc0dbd623c7bfe20d5adc0dac198aa4'
-    var sendMsg = msg
-    bot.push(userId,sendMsg); {
+    event.reply(msg).then(function(data) {
       // success 
-      console.log('send: '+sendMsg);
+      console.log(msg);
     }).catch(function(error) {
       // error 
       console.log('error');
