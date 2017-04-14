@@ -5,7 +5,7 @@ var bot = linebot({
   channelId: '1509414054',
   channelSecret: 'ebdaa763a393b6dae8547b90b1dca906',
   channelAccessToken: 'ROHgG39VF6q/KjocMkj1Vlz5prg0uTGK9wz3C9AIl2mfdrgNe9lyz2FZM/3xFjowC2n6jgzLWVFpXi0965E84q1u5prAjbibk6ptbkkwJHycXaaYVXtLafL6bIvt0MeJAI6pjjut8UTcTaQJwYeZdwdB04t89/1O/w1cDnyilFU='
-});
+}); //realaccesstoken inserted
 
 ```
 bot.on('message', function(event) {
@@ -17,6 +17,7 @@ bot.on('message', function(event) {
   }
 });
 ```
+```
  bot.on('message', function(event) {
    if (event.message.type = 'text') {
      var sentMsg = event.message.text;
@@ -27,7 +28,12 @@ bot.on('message', function(event) {
    }
  }
 }};
+```
 
+//bot.push one by one ( or call python instead)
+```
+lines
+```
 const app = express();
 const linebotParser = bot.parser();
 app.post('/', linebotParser);
