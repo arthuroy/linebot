@@ -7,6 +7,7 @@ var bot = linebot({
   channelAccessToken: 'ROHgG39VF6q/KjocMkj1Vlz5prg0uTGK9wz3C9AIl2mfdrgNe9lyz2FZM/3xFjowC2n6jgzLWVFpXi0965E84q1u5prAjbibk6ptbkkwJHycXaaYVXtLafL6bIvt0MeJAI6pjjut8UTcTaQJwYeZdwdB04t89/1O/w1cDnyilFU='
 });
 
+```
 bot.on('message', function(event) {
   if (event.message.type = 'text') {
     var sendMsg = event.message.text;
@@ -15,6 +16,17 @@ bot.on('message', function(event) {
     console.log('send: '+sendMsg)
   }
 });
+```
+ bot.on('message', function(event) {
+   if (event.message.type = 'text') {
+     var sentMsg = event.message.text;
+     var userId = []
+     for (i=1;i<=10;i++) {
+       bot.push(userId, sentMsg)
+     }
+   }
+ }
+}};
 
 const app = express();
 const linebotParser = bot.parser();
