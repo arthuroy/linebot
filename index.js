@@ -2,17 +2,14 @@ var linebot = require('linebot');
 var express = require('express');
 
 var bot = linebot({
-  channelId: '1509414054',
-  channelSecret: 'ebdaa763a393b6dae8547b90b1dca906',
-  channelAccessToken: 'ROHgG39VF6q/KjocMkj1Vlz5prg0uTGK9wz3C9AIl2mfdrgNe9lyz2FZM/3xFjowC2n6jgzLWVFpXi0965E84q1u5prAjbibk6ptbkkwJHycXaaYVXtLafL6bIvt0MeJAI6pjjut8UTcTaQJwYeZdwdB04t89/1O/w1cDnyilFU='
-}); //realaccesstoken inserted
+  channelId: 'Your Channel ID',
+  channelSecret: 'Your Channel Secret',
+  channelAccessToken: 'Your Channel Access Token'
+});
 
 ```
 bot.on('message', function(event) {
   if (event.message.type = 'text') {
-    var sendMsg = event.message.text;
-    var userId = 'U3dc0dbd623c7bfe20d5adc0dac198aa4'
-    bot.push(userId,sendMsg);
     console.log('send: '+sendMsg)
   }
 });
